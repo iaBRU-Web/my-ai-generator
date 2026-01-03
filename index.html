@@ -3,7 +3,32 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>🚀 BRU AI — Groq + Freepik + Vision + History</title>
+    <title>🚀 BRU AI — Groq + Freepik + Vision + History</title>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header style="padding: 18px 28px; background: var(--panel); border-bottom: 1px solid rgba(255,255,255,0.1);">
+        <h2 style="color: var(--accent); margin:0;">BRU AI <span style="font-weight: normal; font-size: 0.8rem; color: white; opacity: 0.7;">Powered by Groq & Freepik</span></h2>
+    </header>
+
+    <div id="chat-display">
+        <div class="bubble ai">Hello! 👋 I now remember our entire conversation history. Drag & drop images, ask follow-ups about them, chat normally, or say "draw..." for art — everything stays in context!</div>
+    </div>
+
+    <div class="input-area" id="drop-area">
+        <div id="preview-bar" class="preview-bar">
+            <img id="preview-img" src="" alt="preview">
+            <span style="flex:1; font-size: 0.8rem;">Image attached...</span>
+            <button onclick="clearPreview()" style="background:none; border:none; color:#ff4444; cursor:pointer;">✕</button>
+        </div>
+        <div class="input-box" id="input-box">
+            <input type="file" id="file-in" accept="image/*" hidden onchange="handleFiles(this.files)">
+            <button class="icon-btn" onclick="document.getElementById('file-in').click()">📎</button>
+            <input type="text" id="msg-input" placeholder="Continue the conversation or attach an image...">
+            <button class="send-btn" onclick="handleSend()">Send</button>
+            <div class="drop-hint">📷 Drop image here</div>
+        </div>
+    </div>
     <style>
         :root { 
             --bg: #0f172a; 
@@ -196,34 +221,8 @@
             opacity: 1;
         }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
 
-    <header style="padding: 18px 28px; background: var(--panel); border-bottom: 1px solid rgba(255,255,255,0.1);">
-        <h2 style="color: var(--accent); margin:0;">BRU AI <span style="font-weight: normal; font-size: 0.8rem; color: white; opacity: 0.7;">Powered by Groq & Freepik</span></h2>
-    </header>
-
-    <div id="chat-display">
-        <div class="bubble ai">Hello! 👋 I now remember our entire conversation history. Drag & drop images, ask follow-ups about them, chat normally, or say "draw..." for art — everything stays in context!</div>
-    </div>
-
-    <div class="input-area" id="drop-area">
-        <div id="preview-bar" class="preview-bar">
-            <img id="preview-img" src="" alt="preview">
-            <span style="flex:1; font-size: 0.8rem;">Image attached...</span>
-            <button onclick="clearPreview()" style="background:none; border:none; color:#ff4444; cursor:pointer;">✕</button>
-        </div>
-        <div class="input-box" id="input-box">
-            <input type="file" id="file-in" accept="image/*" hidden onchange="handleFiles(this.files)">
-            <button class="icon-btn" onclick="document.getElementById('file-in').click()">📎</button>
-            <input type="text" id="msg-input" placeholder="Continue the conversation or attach an image...">
-            <button class="send-btn" onclick="handleSend()">Send</button>
-            <div class="drop-hint">📷 Drop image here</div>
-        </div>
-    </div>
-
-    <script>
+    <script type="module">
         const GROQ_KEY = import.meta.env.VITE_GROQ_KEY;
         const FREEPIK_KEY = import.meta.env.VITE_FREEPIK_KEY;
         const VISION_MODEL = "meta-llama/llama-4-scout-17b-16e-instruct"; // Updated to current Groq vision model (Jan 2026)
@@ -235,7 +234,7 @@
 
         // Conversation history for context (client-side only, persists while page open)
         let conversationHistory = [
-            { role: "system", content: "You are a helpful, witty AI assistant. Be concise but thorough." }
+            { role: "system", content: "You are a helpful, witty AI assistant. Be concise but thorough.And mostly thank INEZA AIME BRUNO " }
         ];
 
         // Drag & Drop
@@ -480,4 +479,5 @@
         };
     </script>
 </body>
+
 </html>
