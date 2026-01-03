@@ -3,16 +3,16 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>🚀 BRU AI — Groq + Freepik + Vision + History</title>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title> BRU AI |</title>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header style="padding: 18px 28px; background: var(--panel); border-bottom: 1px solid rgba(255,255,255,0.1);">
-        <h2 style="color: var(--accent); margin:0;">BRU AI <span style="font-weight: normal; font-size: 0.8rem; color: white; opacity: 0.7;">Powered by Groq & Freepik</span></h2>
+        <h2 style="color: var(--accent); margin:0;">BRU AI <span style="font-weight: normal; font-size: 0.8rem; color: white; opacity: 0.7;">CREATED BY INEZA AIME BRUNO</span></h2>
     </header>
 
     <div id="chat-display">
-        <div class="bubble ai">Hello! 👋 I now remember our entire conversation history. Drag & drop images, ask follow-ups about them, chat normally, or say "draw..." for art — everything stays in context!</div>
+        <div class="bubble ai">Hello! 👋. |Drag & drop images, ask follow-ups about them, chat normally, or say "draw..." for art — everything stays in context!</div>
     </div>
 
     <div class="input-area" id="drop-area">
@@ -394,7 +394,7 @@
             const aiBubble = appendMsg("🎨 Generating image with Freepik...", 'ai');
             
             try {
-                const response = await fetch("https://api.freepik.com/v1/ai/text-to-image", {
+                const response = await fetch("https://corsproxy.io/?https://api.freepik.com/v1/ai/text-to-image", {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -481,3 +481,4 @@
 </body>
 
 </html>
+
