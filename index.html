@@ -3,33 +3,35 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title> BRU AI |</title>    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <title>BRU AI |</title>
 </head>
 <body>
 
-    <header style="padding: 18px 28px; background: var(--panel); border-bottom: 1px solid rgba(255,255,255,0.1);">
-        <h2 style="color: var(--accent); margin:0;">BRU AI <span style="font-weight: normal; font-size: 0.8rem; color: white; opacity: 0.7;">CREATED BY INEZA AIME BRUNO  </span></h2>
-        <h2><a href="https://bruno-ai-code.vercel.app" target="_blank">Visit Another Of Our Ai With File Recognition</a></h2>
+    <header>
+        <h2>BRU AI <span>CREATED BY INEZA AIME BRUNO</span></h2>
+        <a href="https://bruno-ai-code.vercel.app" target="_blank">Visit Another Of Our Ai With File Recognition</a>
     </header>
 
     <div id="chat-display">
-        <div class="bubble ai">Hello! 👋. |Drag & drop images, ask follow-ups about them, chat normally, or say "draw..." for art — everything stays in context!</div>
+        <div>Hello! 👋. |Drag & drop images, ask follow-ups about them, chat normally, or say "draw..." for art — everything stays in context!</div>
     </div>
 
-    <div class="input-area" id="drop-area">
-        <div id="preview-bar" class="preview-bar">
+    <div id="drop-area">
+        <div id="preview-bar">
             <img id="preview-img" src="" alt="preview">
-            <span style="flex:1; font-size: 0.8rem;">Image attached...</span>
-            <button onclick="clearPreview()" style="background:none; border:none; color:#ff4444; cursor:pointer;">✕</button>
+            <span>Image attached...</span>
+            <button>✕</button>
         </div>
-        <div class="input-box" id="input-box">
-            <input type="file" id="file-in" accept="image/*" hidden onchange="handleFiles(this.files)">
-            <button class="icon-btn" onclick="document.getElementById('file-in').click()">📎</button>
+        
+        <div id="input-box">
+            <input type="file" id="file-in" accept="image/*">
+            <button>📎</button>
             <input type="text" id="msg-input" placeholder="Continue the conversation or attach an image...">
-            <button class="send-btn" onclick="handleSend()">Send</button>
-            <div class="drop-hint">📷 Drop image here</div>
+            <button>Send</button>
+            <div>📷 Drop image here</div>
         </div>
     </div>
+    
     <style>
         :root { 
             --bg: #0f172a; 
@@ -482,6 +484,7 @@
 </body>
 
 </html>
+
 
 
 
